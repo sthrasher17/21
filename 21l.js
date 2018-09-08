@@ -8,26 +8,23 @@ do{
 	var player = 0;
 	var comp = 0;
 	var total = 0;
+	var computerAddValue;
 
 do{
-	player = prompt("Say 1, 2 or 3 to add to the total.");
-	if(player == 1){
-		total = total+1;
-		alert(total);
-		total = total+3
-		alert("computer added 3. yeet. total is now "+total)
+	player = parseInt(prompt("Say 1, 2 or 3 to add to the total."));
+	
+	if(player > 0 && player < 4)
+	{
+	computerAddValue = 4 - player;
+	
+	total = total + player;
+	alert(total);
+	total = total + computerAddValue;
+	alert("computer added "+ computerAddValue +". yeet. total is now " + total)
 	}
-	else if(player == 2){
-		total = total+2
-		alert(total);
-		total = total+2
-		alert("computer added 3. yeet. total is now "+total)
-	}
-	else if(player == 3){
-		total = total+3
-		alert(total);
-		total = total+1
-		alert("computer added 3. yeet. total is now "+total)
+	else
+	{
+		alert("Hey asshole, I said 1, 2 or 3!!!!")
 	}
 }
 while(total < 20);
